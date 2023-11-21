@@ -1,0 +1,1971 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : pRegionalAndLinguisticOptions
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x110acb1400f72b5f
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  internal_properties : CAAAAAgAAABPOo5wfzL5PtlmH9g6pVlcqG1md+uM4GM8B/k/aVja5R6ZseBzxTGWZbo12UeE8bWym5Rl91AKrNq9wTYnFyamg2lAMw==
+  type_code : 31
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAAAQvXZ1Go0oEjcqmCW1AwO4TThOuxvLwIV9+je3B2annsTBnbtyLqbCHU5ybkDI7KLgbjVI1/a9dHbFVJ0W+zKPLiYEvpFBYO2+JNnGji2/8f2NA7DikOsIqvKF1HpdL3E1dWp658AL0/L7IqUPvJBLE9IpTd0pZH7qJh5vzhQxBPCBIIbSVzYdHn5TZtCRs3B1YKEi9aYUiPtj8eIL4ePOvRMSuhXbPV0yaBMYPmL65JqiPLigLFeCTgWRvW0EVET5QxfQX1mB9NeFzxqEYp2aneX/mRMa8KU/Clk3e5WIM/Fpi4pjZK0Z9MSxj/Q/2Z4blsGgE0xNDFBvGdhW+Tc4AFY26qlBDHUOBatKzwX4QxtUlAoYdPrMcBFSqloqNObVugce7ah26A9giLsiEtP4BRcbPgtO4blddVW4Mmu7Hfpo+a5s7nMbLbcT2hVxTccBz8PckcQJNATWqicTxS9EIMU/4QIObIf+cQ7oXbN4SmdR6ZwCOsZOT1eaLff8Sh0Js70xTjyC/kczaXYDMqYFpsA3+LsJ0I4cPI8X9OcdW5RZjQUdMvhCpL8zXUXJp7EsrshjHJ7ojnuKXf1Cur8vxeV+xGCvIn+Uv0N4q3DmAriEqMwnYLQFUf2wS4DBDRB+arHMeIuCfHPAt1Q2iNI8SvjprH508QEgi6VQhqt70byFAo2NqzhNv7fQrSb5WVEi1jwIzNygTAdGENlNaPgAN35aydqATsIDcClRq1Mk7JMoiJASlaMBNazrgJ/9zZ2i2760hvYAZElouwBSUzrW4Zk2t8TXcjvA85DGcnNHF5mztrEv4A7T4nPOa2bOBtjxzH9sAQwBe5vs9e9KZG+HG/kqLBwlE5TUWTlM2CzStLZTJBzG0hV5rZStzoT4fGTgidRdHm61WJgh2v7dhodnfn2kHYsN7ghC3P+AR8IWcxPblU1gAFHskAu+7ClO3Ui+LAqr7rCIBmBznWMElP0JVWL6kpCIgsOLcO2yqaJBdKPux19/UL7nqTHC0Y/xqGAjN1nSQFsxd8TyvgvpSemxY1waMz+DfHaXBYUMWDjEFWljTneOsZn8uZADeYj9txhCmli+4RvYxsuZgWNaRTOZuONzrSgpgtYww5Qqu6tlgEg7mJTwjLnF2Z5o9TsbXXOAsowOaAMyViMmYHd8GRj+g9Se3mYZNSbwzsU4TCmMxdfPNm1hzZzAzSCAOi8415Ea3Zi/JHcGD6Z+HvjJXWpIr7734cssT6vqnPKmtbuH4yTk1kGD8ecMcadMe9xsKt1Bg8i2Dl16YmRBp4guoWRcLhkoS2xLRZdqMy6Wf635j6othH8O/TdD8uphmG1A+54PZvFN70lXBkFEzqTd+gjPIVghp0O62COClfT02qRwmO87mv0PGT+UY6mqle41HSbTgbuGzrYTGHQnk+3XWgeyB17ngZ3mXow6efvtj4qHvAR99go9gY84rsbv0gKWrnHN3mAR4XL7JmcHF7/2mZuH8T08KCO97wXhlMjS5DbajZBynhX5l7zcPksEzBQt3uxt+Q==
+     code : |1-
+      gbufListShortDateFormats is Buffer 
+      gbufListLongDateFormats is Buffer 
+      gbufListTimeFormats is Buffer 
+      
+      CONSTANT
+      	
+      	LOCAL_USER_DEFAULT = 0x0400		//User
+      	LOCAL_SYSTEM_DEFAULT = 0x0800		//System
+      	
+      	
+      	//********************************************** Country of the computer ****************************************************//
+      	LOCALE_ICOUNTRY = 5							//Country Code
+      	LOCALE_SENGCOUNTRY = 4098					//Name of the country in English
+      	LOCALE_SCOUNTRY = 6   						//Name of the country in the language of the computer
+      	LOCALE_SNATIVECTRYNAME = 8					//Name of the country in the language of the country
+      	LOCALE_SABBREVCTRYNAME = 7					//Abbreviation for the name of the country
+      	
+      	//**********************************************Language of the computer ****************************************************//
+      	LOCALE_ILANGUAGE = 1						//Identifier for the language of the computer
+      	LOCALE_SENGLANGUAGE = 4097					//Name of the language in English
+      	LOCALE_SLANGUAGE = 2						//Name of the language in the language of the computer	
+      	LOCALE_SNATIVELANGNAME = 4					//Name of the language in the language of the country
+      	LOCALE_SABBREVLANGNAME = 3 					//Abbreviation for the name of the language
+      	
+      	//********************************************** Currency of the computer ****************************************************//
+      	LOCALE_SENGCURRNAME = 4103					//Name of the currency in English
+      	LOCALE_SNATIVECURRNAME = 4104			    //Name of the currency in the language of the country
+      	
+      	
+      	//********************************************** Calendar ****************************************************//
+      	LOCALE_IFIRSTDAYOFWEEK = 4108 				//First day of the week
+      	LOCALE_SDAYNAME1 = 42                    	//Name for Monday in the language of the computer
+      	LOCALE_SDAYNAME2 = 43                    	//Name for Tuesday in the language of the computer
+      	LOCALE_SDAYNAME3 = 44                     	//Name for Wednesday in the language of the computer
+      	LOCALE_SDAYNAME4 = 45                     	//Name for Thursday in the language of the computer
+      	LOCALE_SDAYNAME5 = 46                     	//Name for Friday in the language of the computer
+      	LOCALE_SDAYNAME6 = 47                     	//Name for Saturday in the language of the computer
+      	LOCALE_SDAYNAME7 = 48                     	//Name for Sunday in the language of the computer
+      	
+      	//********************************************** Numbers ****************************************************//
+      	LOCALE_SDECIMAL = 14						//Decimal separator for the numbers
+      	LOCALE_IDIGITS = 17							//Number of decimals for the numbers
+      	LOCALE_STHOUSAND = 15						//Thousand separator for the numbers
+      	LOCALE_SGROUPING = 16						//Group of digits for the numbers
+      	LOCALE_SNEGATIVESIGN = 81					//Symbol of negative sign for the numbers
+      	LOCALE_INEGNUMBER = 4112                  	//Negative format for the numbers
+      	LOCALE_ILZERO = 18	                        //Display the zeros in front
+      	LOCALE_SLIST = 12    	                    //List separator
+      	LOCALE_IMEASURE = 13    	                //Metric or inch
+      	LOCALE_IDIGITSUBSTITUTION = 4116          	//0 = none, 1 = context, 2 = native digit
+      	
+      	
+      	//********************************************** Currencies ****************************************************//
+      	LOCALE_SCURRENCY = 20 						//Currency symbol
+      	LOCALE_ICURRENCY = 27						//Positive format for the currencies
+      	LOCALE_INEGCURR = 28						//Negative format for the currencies
+      	LOCALE_SMONDECIMALSEP = 22 					//Decimal separator for the currencies
+      	LOCALE_ICURRDIGITS = 25						//Number of decimals for the currencies
+      	LOCALE_SMONTHOUSANDSEP = 23 				//Thousand separator for the currencies
+      	LOCALE_SMONGROUPING = 24   					//Group of digits for the currencies
+      	
+      	
+      	//********************************************** Times ****************************************************//	
+      	LOCALE_STIMEFORMAT = 4099              	    //Format of the time
+      	LOCALE_S1159 = 40                       	//AM symbol
+      	LOCALE_S2359 = 41                        	//PM symbol
+      	
+      	
+      	
+      	//********************************************** Dates ****************************************************//	
+      	LOCALE_SSHORTDATE = 31                  	//Format of short date
+      	LOCALE_SLONGDATE = 32	                  	//Format of long date
+      	DATE_SHORTDATE = 1							//Used to list the formats of short date available for the current language
+      	DATE_LONGDATE = 2 							//Used to list the formats of long date available for the current language
+      	DATE_YEARMONTH = 8 							//Used to list the formats of months and years
+      	
+      	
+      	//********************************************** Symbols ****************************************************//
+      	MINUS_SIGN = “-”
+      	OPENING_BRACKET = “(”
+      	CLOSING_BRACKET = “)”
+      	
+      	
+      	//********************************************** Languages ****************************************************//
+      	
+      	
+      	//Main languages
+      	
+      	LANG_NEUTRAL	=	0x00	//	Neutral	
+      	LANG_ARABIC	=	0x01	//	Arabic	
+      	LANG_BULGARIAN	=	0x02	//	Bulgarian	
+      	LANG_CATALAN	=	0x03	//	Catalan	
+      	LANG_CHINESE	=	0x04	//	Chinese	
+      	LANG_CZECH	=	0x05	//	Czech	
+      	LANG_DANISH	=	0x06	//	Danish	
+      	LANG_GERMAN	=	0x07	//	German	
+      	LANG_GREEK	=	0x08	//	Greek	
+      	LANG_ENGLISH	=	0x09	//	English	
+      	LANG_SPANISH	=	0x0a	//	Spanish	
+      	LANG_FINNISH	=	0x0b	//	Finnish	
+      	LANG_FRENCH	=	0x0c	//	French	
+      	LANG_HEBREW	=	0x0d	//	Hebrew	
+      	LANG_HUNGARIAN	=	0x0e	//	Hungarian	
+      	LANG_ICELANDIC	=	0x0f	//	Icelandic	
+      	LANG_ITALIAN	=	0x10	//	Italian	
+      	LANG_JAPANESE	=	0x11	//	Japanese	
+      	LANG_KOREAN	=	0x12	//	Korean	
+      	LANG_DUTCH	=	0x13	//	Dutch	
+      	LANG_NORWEGIAN	=	0x14	//	Norwegian	
+      	LANG_POLISH	=	0x15	//	Polish	
+      	LANG_PORTUGUESE	=	0x16	//	Portuguese	
+      	LANG_ROMANIAN	=	0x18	//	Romanian	
+      	LANG_RUSSIAN	=	0x19	//	Russian	
+      	LANG_CROATIAN	=	0x1a	//	Croatian	
+      	LANG_SERBIAN	=	0x1a	//	Serbian	
+      	LANG_SLOVAK	=	0x1b	//	Slovak	
+      	LANG_ALBANIAN	=	0x1c	//	Albanian	
+      	LANG_SWEDISH	=	0x1d	//	Swedish	
+      	LANG_THAI	=	0x1e	//	Thai	
+      	LANG_TURKISH	=	0x1f	//	Turkish	
+      	LANG_URDU	=	0x20	//	Urdu	
+      	LANG_INDONESIAN	=	0x21	//	Indonesian	
+      	LANG_UKRAINIAN	=	0x22	//	Ukrainian	
+      	LANG_BELARUSIAN	=	0x23	//	Belarusian	
+      	LANG_SLOVENIAN	=	0x24	//	Slovenian	
+      	LANG_ESTONIAN	=	0x25	//	Estonian	
+      	LANG_LATVIAN	=	0x26	//	Latvian	
+      	LANG_LITHUANIAN	=	0x27	//	Lithuanian	
+      	LANG_FARSI	=	0x29	//	Farsi	
+      	LANG_VIETNAMESE	=	0x2a	//	Vietnamese	
+      	LANG_ARMENIAN	=	0x2b	//	Armenian	
+      	LANG_AZERI	=	0x2c	//	Azeri	
+      	LANG_BASQUE	=	0x2d	//	Basque	
+      	LANG_MACEDONIAN	=	0x2f	//	FYRO	Macedonian
+      	LANG_AFRIKAANS	=	0x36	//	Afrikaans	
+      	LANG_GEORGIAN	=	0x37	//	Georgian	
+      	LANG_FAEROESE	=	0x38	//	Faeroese	
+      	LANG_HINDI	=	0x39	//	Hindi	
+      	LANG_MALAY	=	0x3e	//	Malay	
+      	LANG_KAZAK	=	0x3f	//	Kazak	
+      	LANG_KYRGYZ	=	0x40	//	Kyrgyz	
+      	LANG_SWAHILI	=	0x41	//	Swahili	
+      	LANG_UZBEK	=	0x43	//	Uzbek	
+      	LANG_TATAR	=	0x44	//	Tatar	
+      	LANG_BENGALI	=	0x45	//	NOT	supported.
+      	LANG_PUNJABI	=	0x46	//	Punjabi	
+      	LANG_GUJARATI	=	0x47	//	Gujarati	
+      	LANG_ORIYA	=	0x48	//	NOT	supported.
+      	LANG_TAMIL	=	0x49	//	Tamil	
+      	LANG_TELUGU	=	0x4a	//	Telugu	
+      	LANG_KANNADA	=	0x4b	//	Kannada	
+      	LANG_MALAYALAM	=	0x4c	//	NOT	supported.
+      	LANG_ASSAMESE	=	0x4d	//	NOT	supported.
+      	LANG_MARATHI	=	0x4e	//	Marathi	
+      	LANG_SANSKRIT	=	0x4f	//	Sanskrit	
+      	LANG_MONGOLIAN	=	0x50	//	Mongolian	
+      	LANG_GALICIAN	=	0x56	//	Galician	
+      	LANG_KONKANI	=	0x57	//	Konkani	
+      	LANG_MANIPURI	=	0x58	//	NOT	supported.
+      	LANG_SINDHI	=	0x59	//	NOT	supported.
+      	LANG_SYRIAC	=	0x5a	//	Syriac	
+      	LANG_KASHMIRI	=	0x60	//	NOT	supported.
+      	LANG_NEPALI	=	0x61	//	NOT	supported.
+      	LANG_DIVEHI	=	0x65	//	Divehi	
+      	LANG_INVARIANT	=	0x7f	//
+      	
+      	
+      	//Sub-languages		
+      	
+      	SUBLANG_ARABIC_SAUDI_ARABIA	=	0x01	//	Arabic	(Saudi	Arabia)	
+      	SUBLANG_ARABIC_IRAQ	=	0x02	//	Arabic	(Iraq)		
+      	SUBLANG_ARABIC_EGYPT	=	0x03	//	Arabic	(Egypt)		
+      	SUBLANG_ARABIC_LIBYA	=	0x04	//	Arabic	(Libya)		
+      	SUBLANG_ARABIC_ALGERIA	=	0x05	//	Arabic	(Algeria)		
+      	SUBLANG_ARABIC_MOROCCO	=	0x06	//	Arabic	(Morocco)		
+      	SUBLANG_ARABIC_TUNISIA	=	0x07	//	Arabic	(Tunisia)		
+      	SUBLANG_ARABIC_OMAN	=	0x08	//	Arabic	(Oman)		
+      	SUBLANG_ARABIC_YEMEN	=	0x09	//	Arabic	(Yemen)		
+      	SUBLANG_ARABIC_SYRIA	=	0x0a	//	Arabic	(Syria)		
+      	SUBLANG_ARABIC_JORDAN	=	0x0b	//	Arabic	(Jordan)		
+      	SUBLANG_ARABIC_LEBANON	=	0x0c	//	Arabic	(Lebanon)		
+      	SUBLANG_ARABIC_KUWAIT	=	0x0d	//	Arabic	(Kuwait)		
+      	SUBLANG_ARABIC_UAE	=	0x0e	//	Arabic	(U.A.E.)		
+      	SUBLANG_ARABIC_BAHRAIN	=	0x0f	//	Arabic	(Bahrain)		
+      	SUBLANG_ARABIC_QATAR	=	0x10	//	Arabic	(Qatar)		
+      	
+      	SUBLANG_AZERI_LATIN	=	0x01	//	Azeri	(Latin)		
+      	SUBLANG_AZERI_CYRILLIC	=	0x02	//	Azeri	(Cyrillic)		
+      	
+      	SUBLANG_CHINESE_TRADITIONAL	=	0x01	//	Chinese	(Traditional)		
+      	SUBLANG_CHINESE_SIMPLIFIED	=	0x02	//	Chinese	(Simplified)		
+      	SUBLANG_CHINESE_HONGKONG	=	0x03	//	Chinese	(Hong	Kong	SAR,
+      	SUBLANG_CHINESE_SINGAPORE	=	0x04	//	Chinese	(Singapore)		
+      	SUBLANG_CHINESE_MACAU	=	0x05	//	Chinese	(Macau	SAR)	
+      	
+      	SUBLANG_DUTCH	=	0x01	//	Dutch			
+      	SUBLANG_DUTCH_BELGIAN	=	0x02	//	Dutch	(Belgian)		
+      	
+      	SUBLANG_ENGLISH_US	=	0x01	//	English	(US)		
+      	SUBLANG_ENGLISH_UK	=	0x02	//	English	(UK)		
+      	SUBLANG_ENGLISH_AUS	=	0x03	//	English	(Australian)		
+      	SUBLANG_ENGLISH_CAN	=	0x04	//	English	(Canadian)		
+      	SUBLANG_ENGLISH_NZ	=	0x05	//	English	(New	Zealand)	
+      	SUBLANG_ENGLISH_EIRE	=	0x06	//	English	(Ireland)		
+      	SUBLANG_ENGLISH_SOUTH_AFRICA	=	0x07	//	English	(South	Africa)	
+      	SUBLANG_ENGLISH_JAMAICA	=	0x08	//	English	(Jamaica)		
+      	SUBLANG_ENGLISH_CARIBBEAN	=	0x09	//	English	(Caribbean)		
+      	SUBLANG_ENGLISH_BELIZE	=	0x0a	//	English	(Belize)		
+      	SUBLANG_ENGLISH_TRINIDAD	=	0x0b	//	English	(Trinidad)		
+      	SUBLANG_ENGLISH_ZIMBABWE	=	0x0c	//	English	(Zimbabwe)		
+      	SUBLANG_ENGLISH_PHILIPPINES	=	0x0d	//	English	(Philippines)		
+      	
+      	SUBLANG_FRENCH	=	0x01	//	French			
+      	SUBLANG_FRENCH_BELGIAN	=	0x02	//	French	(Belgian)		
+      	SUBLANG_FRENCH_CANADIAN	=	0x03	//	French	(Canadian)		
+      	SUBLANG_FRENCH_SWISS	=	0x04	//	French	(Swiss)		
+      	SUBLANG_FRENCH_LUXEMBOURG	=	0x05	//	French	(Luxembourg)		
+      	SUBLANG_FRENCH_MONACO	=	0x06	//	French	(Monaco)		
+      	
+      	SUBLANG_GERMAN	=	0x01	//	German			
+      	SUBLANG_GERMAN_SWISS	=	0x02	//	German	(Swiss)		
+      	SUBLANG_GERMAN_AUSTRIAN	=	0x03	//	German	(Austrian)		
+      	SUBLANG_GERMAN_LUXEMBOURG	=	0x04	//	German	(Luxembourg)		
+      	SUBLANG_GERMAN_LIECHTENSTEIN	=	0x05	//	German	(Liechtenstein)		
+      	
+      	SUBLANG_ITALIAN	=	0x01	//	Italian			
+      	SUBLANG_ITALIAN_SWISS	=	0x02	//	Italian	(Swiss)		
+      	
+      	SUBLANG_KOREAN	=	0x01	//	Korean			
+      	
+      	SUBLANG_LITHUANIAN	=	0x01	//	Lithuanian			
+      	
+      	SUBLANG_MALAY_MALAYSIA	=	0x01	//	Malay	(Malaysia)		
+      	SUBLANG_MALAY_BRUNEI_DARUSSALAM	=	0x02	//	Malay	(Brunei	Darassalam)	
+      	
+      	SUBLANG_NORWEGIAN_BOKMAL	=	0x01	//	Norwegian	(Bokmal)		
+      	SUBLANG_NORWEGIAN_NYNORSK	=	0x02	//	Norwegian	(Nynorsk)		
+      	
+      	SUBLANG_PORTUGUESE_BRAZILIAN	=	0x01	//	Portuguese	(Brazil)		
+      	SUBLANG_PORTUGUESE	=	0x02	//	Portuguese	(Portugal)		
+      	
+      	SUBLANG_SERBIAN_LATIN	=	0x02	//	Serbian	(Latin)		
+      	SUBLANG_SERBIAN_CYRILLIC	=	0x03	//	Serbian	(Cyrillic)		
+      	
+      	SUBLANG_SPANISH	=	0x01	//	Spanish	(Castilian)		
+      	SUBLANG_SPANISH_MEXICAN	=	0x02	//	Spanish	(Mexican)		
+      	SUBLANG_SPANISH_MODERN	=	0x03	//	Spanish	(Spain)		
+      	SUBLANG_SPANISH_GUATEMALA	=	0x04	//	Spanish	(Guatemala)		
+      	SUBLANG_SPANISH_COSTA_RICA	=	0x05	//	Spanish	(Costa	Rica)	
+      	SUBLANG_SPANISH_PANAMA	=	0x06	//	Spanish	(Panama)		
+      	SUBLANG_SPANISH_DOMINICAN_REPUBLIC	=	0x07	//	Spanish	(Dominican	Republic)	
+      	SUBLANG_SPANISH_VENEZUELA	=	0x08	//	Spanish	(Venezuela)		
+      	SUBLANG_SPANISH_COLOMBIA	=	0x09	//	Spanish	(Colombia)		
+      	SUBLANG_SPANISH_PERU	=	0x0a	//	Spanish	(Peru)		
+      	SUBLANG_SPANISH_ARGENTINA	=	0x0b	//	Spanish	(Argentina)		
+      	SUBLANG_SPANISH_ECUADOR	=	0x0c	//	Spanish	(Ecuador)		
+      	SUBLANG_SPANISH_CHILE	=	0x0d	//	Spanish	(Chile)		
+      	SUBLANG_SPANISH_URUGUAY	=	0x0e	//	Spanish	(Uruguay)		
+      	SUBLANG_SPANISH_PARAGUAY	=	0x0f	//	Spanish	(Paraguay)		
+      	SUBLANG_SPANISH_BOLIVIA	=	0x10	//	Spanish	(Bolivia)		
+      	SUBLANG_SPANISH_EL_SALVADOR	=	0x11	//	Spanish	(El	Salvador)	
+      	SUBLANG_SPANISH_HONDURAS	=	0x12	//	Spanish	(Honduras)		
+      	SUBLANG_SPANISH_NICARAGUA	=	0x13	//	Spanish	(Nicaragua)		
+      	SUBLANG_SPANISH_PUERTO_RICO	=	0x14	//	Spanish	(Puerto	Rico)	
+      	
+      	SUBLANG_SWEDISH	=	0x01	//	Swedish			
+      	SUBLANG_SWEDISH_FINLAND	=	0x02	//	Swedish	(Finland)		
+      	
+      	SUBLANG_URDU_PAKISTAN	=	0x01	//	Urdu	(Pakistan)		
+      	SUBLANG_URDU_INDIA	=	0x02	//	Urdu	(India)		
+      	
+      	SUBLANG_UZBEK_LATIN	=	0x01	//	Uzbek	(Latin)		
+      	SUBLANG_UZBEK_CYRILLIC	=	0x02	//	Uzbek	(Cyrillic)
+      	
+      END
+     type : 720896
+  procedures :
+   -
+     name : Currency_CurrencySymbol
+     internal_properties : CAAAAAgAAADapy0UreDd41TvOGrU8PTkY640J76QFAhMc6i7LL7dqU2RP+9nkAia0Sneb2sYj9nGgiRSu4fo23Kz0lDqYlGAQd2TghUncbaRiTnBM2atBnP0I62uV8wiqK2vrGW+Nq7dtSULAKVR+aqgy/cH4stha7pXXlAB5Jjmrn1aaMUJ7+C6jz7fuc2u8SS3WoUgmidLUVcTasRyx2MqwVNBH2KFhFfhXNB68wBFXGFhyO/RoKs/zk80RGedh60yfyNXrQ==
+     procedure_id : 1228017135187929951
+     type_code : 15
+     code : |1-
+      // Summary: Returns or modifies the currency symbol
+      // Syntax:
+      //[ <Result> = ] Currency_CurrencySymbol ([<nInfoFromWhom> is int [, <sSymbol> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      //	sSymbol (string - default value=""): New symbol
+      // Return value:
+      // 	Undefined type: Currency symbol, True or False if it is modified
+      
+      Procedure Currency_CurrencySymbol(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sSymbol is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the currency symbol
+      IF sSymbol = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SCURRENCY, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sSymbolCurrency is string
+      		sSymbolCurrency = Left(bufRESULT, nBufferSize-1)
+      		RESULT sSymbolCurrency 
+      	END
+      	
+      ELSE
+      	
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_SCURRENCY, sSymbol) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Currency_PositiveFormat
+     internal_properties : CAAAAAgAAAC4KPzjs+Jph2EySwJjklpJplnanuoGxB5xFmDl4J+zh19lY40oqdOyypuURhQtNH6MVzJkJdPuabjPRlDo/lxA3reyQAwY0mL/Q9/sZNNlZ07oQ1xhZ/qWWKHtvEbT4Hj7kz/+feOc4DoOvV+bre1Kc0RN2X23ZRH8dlmQIty9JsaY+VNCg6iLdRi3WnkzWhZ9W5n+X8JRhr/+KQF7OrKoznflGV8+pkwcGcYdVv4Tt8/jZYs/NDDUqn6ACHueQ6i7
+     procedure_id : 1228017135187995487
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the positive format for the currencies
+      // Syntax:
+      //[ <Result> = ] Curerncy_PositiveFormat ([<nInfoFromWhom> is int [, <sFormat> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	sFormat (string - default value=""): New format for the positive values
+      // Return value:
+      // 	Undefined type: Positive format for the currencies, True or False if it is modified
+      
+      Procedure Currency_PositiveFormat(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sFormat is string = “”)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      //Create the associative array of the positive formats for the currencies 
+      arrCurrencyPositiveFormats is array of strings
+      _CreateArrCurrencyPositiveFormats(nInfoFromWhom, arrCurrencyPositiveFormats)
+      
+      IF sFormat = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_ICURRENCY, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sPositiveFormat is string
+      		sPositiveFormat = Left(bufRESULT, nBufferSize-1)
+      		RESULT arrCurrencyPositiveFormats[Val(sPositiveFormat) + 1 ]
+      		
+      	END
+      ELSE
+      	
+      	//Modify it
+      	nSubscript is int = ArraySeek(arrCurrencyPositiveFormats,asLinear,sFormat)
+      	nSubscript--
+      	sFormat = nSubscript
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_ICURRENCY, sFormat) = 0 THEN
+      		RESULT False
+      	ELSE
+      		RESULT True
+      	END
+      	
+      END
+      
+     type : 458752
+   -
+     name : Currency_NegativeFormat
+     internal_properties : CAAAAAgAAADI2EyTI7IZ/9HCi2KD0hrpJskKbjrW9H6RdhCVcG+D10+lQ40IaVMCmqt0xpQN9F4MB+J0VQM+qRgvNsA4LiywLjfSwAx4chJPk58MxFPFR+7YkwyRl8q2WMGdbFYjsEgzS9dmRUv0OGLmhYczBSXSqzzFQUU/PWkEDiEYurRVTr7w0RuKa4ADndD/AtFLkh7VM9Em50rpvuc20elzMmoQ5s/dIYeGHqSEsW5ljrbrn8f7HVOnHCiscq6w2Avu89hL
+     procedure_id : 1228017135188061023
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the negative format for the currencies
+      // Syntax:
+      //[ <Result> = ] Curerncy_NegativeFormat ([<nInfoFromWhom> is int [, <sFormat> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	sFormat (string - default value=""): New format for the negative values
+      // Return value:
+      // 	Undefined type: Negative format for the currencies, True or False if it is modified
+      
+      Procedure Currency_NegativeFormat(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sFormat is string = “”)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      //Create the associative array of the negative formats for the currencies 
+      arrCurrencyNegativeFormats is array of strings
+      _CreateArrCurrencyNegativeFormats(nInfoFromWhom, arrCurrencyNegativeFormats)
+      
+      IF sFormat = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_INEGCURR, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sNegativeFormat is string
+      		sNegativeFormat = Left(bufRESULT, nBufferSize-1)
+      		RESULT arrCurrencyNegativeFormats[Val(sNegativeFormat) + 1 ]
+      	END
+      	
+      ELSE
+      	//Modify it
+      	nSubscript is int = ArraySeek(arrCurrencyNegativeFormats,asLinear,sFormat)
+      	nSubscript--
+      	sFormat = nSubscript
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_INEGCURR, sFormat) = 0 THEN
+      		RESULT False
+      	ELSE
+      		RESULT True
+      	END
+      END
+      
+     type : 458752
+   -
+     name : Currency_DecimalSeparator
+     internal_properties : CAAAAAgAAAAKd30EvXBRYwyXeKoUqKR0k+Ykn/ZIFKD84wCjVJ5VcSWxx//XkEDqqSEeP7+Yj1lGgiRSOwdo2/KzUtDqYtGAQV0TAhUncTaRCTnBs+athvP0I60u10wiKK0vLGW+tu4ddWXLQOWRuWpgCzdHoouhq3qXHpBBJFimbr2aqIXJLyB6z/4f+Q1useT3msXgWmeLEet/ZmgGA5eOhQ89W06RMItliJwed5w58PUNpPv9DLfDQksw6PspFz1Cb9OH/Q==
+     procedure_id : 1228017135188126559
+     type_code : 15
+     code : |1-
+      // Summary: Returns or modifies the decimal symbol for the currencies
+      // Syntax:
+      //[ <Result> = ] Currencye_DecimalSeparator ([<nInfoFromWhom> is int [, <sSymbol> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	sSymbol (string - default value=""): New symbol
+      // Return value:
+      // 	Undefined type: Decimal symbol for the currencies
+      
+      Procedure Currency_DecimalSeparator(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sSymbol is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the decimal symbol for the currencies
+      IF sSymbol = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SMONDECIMALSEP , &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sDecimalSeparator is string
+      		sDecimalSeparator = Left(bufRESULT, nBufferSize-1)
+      		RESULT sDecimalSeparator 
+      	END
+      	
+      ELSE
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_SMONDECIMALSEP, sSymbol) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      END
+     type : 458752
+   -
+     name : Currency_NumberOfDecimals
+     internal_properties : CAAAAAgAAACIGIxTY3LZx/Gie9JTour5dklyrvpWdL6RdpDVMO8DV49lA40IqRMCWus0xhTNNJ6MR2K0FYO+6RivtoD4rqyw7reSwAw4spKP018MxBMFh+6Yk0xRl8r2WMEdrJYjMEjTq7cGZauU2MLGJSeTpcWyyxwl4WWfXQnkbkE4mtR1Lt5QMbuqSyCjfTCforFrMn71k7HGh6qJ3scWcYnT0gowRu/9AWem/oSk0U5FrpbT9++jJUu/lLC0qm7wmMsuM5iL
+     procedure_id : 1228017135188192095
+     type_code : 15
+     code : |1-
+      // Summary: Returns or modifies the number of decimals for the currencies
+      // Syntax:
+      //[ <Result> = ] Currency_NumberOfDecimals ([<nInfoFromWhom> is int [, <nNbOfDecimals> is int]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	nNbOfDecimals (integer - default value=-1): New number of decimals
+      // Return value:
+      // 	Undefined type: Number of decimals for the currencies, True or False if it is modified
+      
+      Procedure Currency_NumberOfDecimals(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL nNbOfDecimals is int = -1)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      IF nNbOfDecimals = -1 THEN 
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_ICURRDIGITS , &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sNumberOfDecimals is string
+      		sNumberOfDecimals = Left(bufRESULT, nBufferSize-1)
+      		RESULT sNumberOfDecimals 
+      	END
+      	
+      ELSE
+      	
+      	//Modify it
+      	sNbOfDecimals is string = nNbOfDecimals
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_ICURRDIGITS, sNbOfDecimals) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Currency_ThousandSeparator
+     internal_properties : CAAAAAgAAAB4aDyj86Ipn8GS21LTwor51hmiHsqmpD6x9mBl4P8T578Fww2ICXMSCjuUxpQNlN7sd9KkxfPOSTivhtAonnxgPhcSQOy4cgK/I9+sJLNFx+7IY5xBx9r2mIFt/MazwFgrYw+uzbOMMGpeTW/LHR1649RdyY2HVWFsxmmgEkztlraoicOS05gb5WhHKiljysZtaylurxLBFm+OuVHrquJYfkc1SS9O1lxMKdZthi6LP0ebPbNHHEhsEj7AyDveg2j7
+     procedure_id : 1228017135188257631
+     type_code : 15
+     code : |1-
+      // Summary: Returns or modifies the thousand symbol for the currencies
+      // Syntax:
+      //[ <Result> = ] Currency_ThousandSeparator ([<nInfoFromWhom> is int [, <sSep> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	sSep (string - default value=""): New separator
+      // Return value:
+      // 	Undefined type: Thousand symbol for the currencies, True or False if it is modified
+      
+      Procedure Currency_ThousandSeparator(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sSép is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      IF sSép = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SMONTHOUSANDSEP , &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sThousandSeparator is string
+      		sThousandSeparator = Left(bufRESULT, nBufferSize-1)
+      		RESULT sThousandSeparator 
+      	END
+      	
+      ELSE
+      	
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_SMONTHOUSANDSEP, sSép) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      END
+     type : 458752
+   -
+     name : Number_DecimalSeparator
+     internal_properties : CAAAAAgAAACi39Us1fffu2RPBHQYIlDcBfWIP1q4VGRAd/BLuLatheF9c5+7OICGZT2Op2vQbw1qdthy19dgz4YXOlhumlGsJXFv8pmHIRLlvVmZz+7twn8InwWax3w+TBE/DIkePvST5xc5uvuvS+Da9Q0VOKn/CezZrEp3Unqc2HdYRqsnhWbMmcQ5h3PYLx6hMOP2UH1RY329+B60Vf2Qhw3rQbQ/Lv3fvi4MfUZfii/LWkzsQ0xeJSgVQUSWvMXalzsvVQ==
+     procedure_id : 1228017135188323167
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the decimal symbol for the numbers
+      // Syntax:
+      //[ <Result> = ] Number_DecimalSeparator ([<nInfoFromWhom> is int [, <sNewSeparator> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	sNewSeparator (string - default value=""): New decimal symbol
+      // Return value:
+      // 	Undefined type: Decimal symbol for the numbers, True or False if it is modified
+      
+      Procedure Number_DecimalSeparator(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sNewSeparator is string =“”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the decimal separator
+      IF sNewSeparator = “” THEN 
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SDECIMAL, &bufRESULT, 200)
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sDecimalSeparator is string
+      		sDecimalSeparator = Left(bufRESULT, nBufferSize-1)
+      		RESULT sDecimalSeparator 
+      	END
+      	
+      ELSE
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_SDECIMAL, sNewSeparator) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Number_NumberOfDecimals
+     internal_properties : CAAAAAgAAAA6R030jYC5w/x3WKpEyITEYxY038aoNJCck7AzFO4l0YVRR49XYNBqueEen4/4T+m2EnSSy2fIa5JjYsDK8sGAwV1T0pVX4Zbhybnhw6YNVsOkEy3+V8yyyF3/fCXOxkbFjU2jqF0JcRII8w8vGmOZsxL/1jiZXNAu9iVycJ1hZ8iy91an8eXmOezf8m240j+TKbMXbkD+ex8WDYdl0waJGOMNIKQWj5QhGL1FrNO1hL87CqO4YFOBp40SX8O3zQ==
+     procedure_id : 1228017135188388703
+     type_code : 15
+     code : |1-
+      // Summary: Returns or modifies the number of decimals for the numbers
+      // Syntax:
+      //[ <Result> = ] Number_NumberOfDecimals ([<nInfoFromWhom> is int [, <nNbOfDecimals> is int]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	nNbOfDecimals (integer - default value=-1): New number of decimals
+      // Return value:
+      // 	Undefined type: Number of decimals for the numbers, -1 if an error occurs, True or False if it is modified
+      
+      Procedure Number_NumberOfDecimals(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL nNbOfDecimals is int = -1 )
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the number of decimals
+      IF nNbOfDecimals = -1 THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_IDIGITS , &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT -1
+      	ELSE
+      		// Copy the buffer
+      		sNumberOfDecimals is string
+      		sNumberOfDecimals = Left(bufRESULT, nBufferSize-1)
+      		RESULT Val(sNumberOfDecimals)
+      	END
+      	
+      ELSE
+      	
+      	//Modify it
+      	sNbOfDecimals is string = nNbOfDecimals
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_IDIGITS, sNbOfDecimals) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Number_ThousandSeparator
+     internal_properties : CAAAAAgAAADSryUc5djFG2zXEHLM+Hxci4YcvyY4TNC0C9CT9PaVsaW5F5f/aJASSbFW94fIxwF+4rwSGyeAiwobsmDK6qFQkYXzem1/oR7xeZHJiyaV3lsU+60up/Si4CXvXFVGhmppKen3XDkFZQ4kn6ODrtcNN54L+gxVKBS6IvGmhNF1GwxuY2rLvcGalbjbRsEMtiPH1e+L4kz6T/uyWfspB3qdvA8phLhSy1jttMn5oAc5CDNHxkdMbI9Ff9XqhytfpQ==
+     procedure_id : 1228017135188454239
+     type_code : 15
+     code : |1-
+      // Summary: Returns or modifies the thousand separator for the numbers
+      // Syntax:
+      //[ <Result> = ] Number_ThousandSeparator ([<nInfoFromWhom> is int [, <sSep> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	sSep (string - default value=""): New thousand separator
+      // Return value:
+      // 	Undefined type: Thousand separator for the numbers, True or False if it is modified
+      
+      Procedure Number_ThousandSeparator(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sSép is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the thousand separator
+      IF sSép = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_STHOUSAND , &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sThousandSeparator is string
+      		sThousandSeparator = Left(bufRESULT, nBufferSize-1)
+      		RESULT sThousandSeparator 
+      	END
+      	
+      ELSE
+      	
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_STHOUSAND, sSép) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Currency_GroupOfDigits
+     internal_properties : CAAAAAgAAAC9ptWzlw9impfLYv5km4JPSrdUquUg+g6alG0D2vOQ8jJf37QdGzFKfeEwYkqsTW6QzFTEeTmKE3f5/m0RmduJCqvkU4e4cTFbLx6Q+bJd3zjhkzjnOHTSRybhXpd8qSfkcCj2DPd+5ocOU0duzLRmjickk5ibMxmn8P00a/06ktR8mSrghktyvR9sZcNXXke7AwF/DQdi4bFlKlIbKoITJ4LsK9Ia0BqfJ4alUV8Iil1V7O5a
+     procedure_id : 1228017135188519775
+     type_code : 15
+     code : |1+
+      // Summary: Returns the group of digits for the currencies
+      // Syntax:
+      //[ <Result> = ] Currency_GroupOfdigits ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      // Return value:
+      // 	string: Group of digits
+      
+      Procedure Currency_GroupOfDigits(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SMONGROUPING , &bufRESULT, 200)
+      sThousandSeparator is string = Currency_ThousandSeparator(nInfoFromWhom)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sGroupOfDigits is string
+      	
+      	//Retrieve a string in the following format:
+      	//3;0 => 123 456 789
+      	//3;2;0 => 12 34 56 789
+      	//3 => 123456 789
+      	//3;2 => 1234 56 789
+      	sGroupOfDigits = Left(bufRESULT, nBufferSize-1)
+      	
+      	//Transform this result into "human" representation
+      	sGroupOfDigitsInClear is string
+      	sGroupOfDigitsInClear = _GroupingInClear(sGroupOfDigits, sThousandSeparator)
+      	
+      	RESULT sGroupOfDigitsInClear 
+      END
+      
+      
+      
+      
+     type : 458752
+   -
+     name : _GroupingInClear
+     procedure_id : 1228017135188585311
+     type_code : 15
+     code : |1-
+      // Summary: Returns a clear representation with an example of the grouping
+      // Syntax:
+      //[ <Result> = ] _GroupingInClear (<sGroupOfDigits>, <sThousandSeparator>)
+      //
+      // Parameters:
+      //	sGroupOfDigits: Group of digits as it is returned by the API
+      //	sThousandSeparator: Thousand separator
+      // Return value:
+      // 	string: Clear representation of the group of digits
+      
+      Procedure PRIVATE _GroupingInClear(sGroupOfDigits, sThousandSeparator)
+      
+      sGroupOfDigitsInClear is string 
+      
+      //With digits from 1 to 9 to reconstitute the sample number that corresponds
+      nNumber is int = 9
+      nNbOfDigitsGroup is int 
+      nNbOfDigitsPrevGroup is int 
+      
+      //If sGroupOfDigits= "0" => there is no grouping ..the digits will be displayed without separator
+      IF sGroupOfDigits <> “0” THEN 
+      	
+      	//Browse the groupings if any
+      	FOR EACH string sGroup of sGroupOfDigits SEPAREE by “;”
+      		
+      		//Retrieve the number of digits displayed in the grouping
+      		nNbOfDigitsGroup = Val(sGroup)
+      		
+      		//If it is 0.. repeat the style of the previous grouping until no digit is left  
+      		IF nNbOfDigitsGroup = 0 THEN
+      			
+      			nNbOfDigitsGroup = nNbOfDigitsPrevGroup
+      			WHILE nNumber > 0
+      				
+      				FOR i = 1 TO nNbOfDigitsPrevGroup
+      					sGroupOfDigitsInClear = nNumber + sGroupOfDigitsInClear
+      					nNumber --
+      				END
+      				IF nNumber <> 0 THEN 
+      					sGroupOfDigitsInClear = sThousandSeparator + sGroupOfDigitsInClear
+      				END
+      			END
+      			
+      		ELSE
+      			
+      			//Update the previous grouping, in case there is 0 for the next grouping
+      			nNbOfDigitsPrevGroup = nNbOfDigitsGroup
+      			//Add the digits into the sample for this grouping
+      			FOR i = 1 TO nNbOfDigitsGroup
+      				sGroupOfDigitsInClear = nNumber + sGroupOfDigitsInClear
+      				nNumber --
+      			END
+      			IF nNumber <> 0 THEN
+      				sGroupOfDigitsInClear = sThousandSeparator + sGroupOfDigitsInClear
+      			END
+      			
+      		END
+      		
+      	END
+      END
+      
+      // No specified grouping and no 0 to repeat the previous grouping 
+      // but we still have some digits to display
+      // => display them without grouping
+      WHILE nNumber > 0 
+      	sGroupOfDigitsInClear = nNumber + sGroupOfDigitsInClear
+      	nNumber --
+      END
+      
+      RESULT sGroupOfDigitsInClear
+     type : 458752
+   -
+     name : Number_GroupOfDigits
+     internal_properties : CAAAAAgAAAC9ptWzlw9impfLYv5km4JPSrdUquUg+g6alG0D2vOQ8jJf37QdGzFKfeEwYkqsTW6QzFTEeTmKE3f5/m0RmduJCqvkU4e4cTFbLx6Q+bJd3zjhkzjnOHTSRybhXpd8qSfkcCj2DPd+5ocOU0duzLRmjickk5ibMxmn8P00a/06ktR8mSrghktyvR9sZcNXXke7AwF/DQdi4bFlKlIbKoITJ4LsK9Ia0BqfJ4alUV8Iil1V7O5a
+     procedure_id : 1228017135188650847
+     type_code : 15
+     code : |1+
+      // Summary: Returns the group of digits for the numbers
+      // Syntax:
+      //[ <Result> = ] Number_GroupOfDigits ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      // Return value:
+      // 	string: Group of digits
+      
+      Procedure Number_GroupOfDigits(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SGROUPING , &bufRESULT, 200)
+      sThousandSeparator is string = Number_ThousandSeparator(nInfoFromWhom)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sGroupOfDigits is string
+      	
+      	//Retrieve a string in the following format:
+      	//3;0 => 123 456 789
+      	//3;2;0 => 12 34 56 789
+      	//3 => 123456 789
+      	//3;2 => 1234 56 789
+      	sGroupOfDigits = Left(bufRESULT, nBufferSize-1)
+      	
+      	//Transform this result into "human" representation
+      	sGroupOfDigitsInClear is string
+      	sGroupOfDigitsInClear = _GroupingInClear(sGroupOfDigits, sThousandSeparator)
+      	
+      	RESULT sGroupOfDigitsInClear 
+      END
+      
+      
+      
+      
+     type : 458752
+   -
+     name : Number_NegativeSymbol
+     internal_properties : CAAAAAgAAADapy0UreDd41TvOGrU8PTkY640J76QFAhMc6i7LL7dqU2RP+9nkAia0Sneb2sYj9nGgiRSu4fo23Kz0lDqYlGAQd2TghUncbaRiTnBM2atBnP0I62uV8wiqK2vrGW+Nq7dtSULAKVR+aqgy/cH4stha7pXXlAB5Jjmrn1aaMUJ7+C6jz7fuc2u8SS3WoUgmidLUVcTasRyx2MqwVNBH2KFhFfhXNB68wBFXGFhyO/RoKs/zk80RGedh60yfyNXrQ==
+     procedure_id : 1228017135188716383
+     type_code : 15
+     code : |1-
+      // Summary: Returns or modifies the symbol of the negative sign for the numbers
+      // Syntax:
+      //[ <Result> = ] Number_NegativeSymbol ([<nInfoFromWhom> is int [, <sSymbol> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      //	sSymbol (string - default value=""): New symbol
+      // Return value:
+      // 	Undefined type: Symbol of the negative sign, True or False if it is modified
+      
+      Procedure Number_NegativeSymbol(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sSymbol is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the symbol of the negative sign
+      IF sSymbol = “” THEN 
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SNEGATIVESIGN, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sNegativeSymbol is string
+      		sNegativeSymbol = Left(bufRESULT, nBufferSize-1)
+      		RESULT sNegativeSymbol 
+      	END
+      	
+      ELSE
+      	
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_SNEGATIVESIGN, sSymbol) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Number_NegativeFormat
+     internal_properties : CAAAAAgAAABeTt6VOdA3gS9+IIPz4xKPbI88mMAm3mZrHhltbZOrHRG397NahUliXP/4qvZJtOgK4d6yKzvYWWIDGhA+joDuREVm4iIQpD79T9/sYsNVecSyJx5Lkwj2Xq3l5Jx7nF4KDBC//rI9Zbmz0hyovjrVmkVO2n62Zg77Q66VPzGm0UHdNqi3JiEk9H1Uf6acC/1QUIbzFMWOQ1qH+jrsMwN3HaDKBtkwp00fOuc2T/dKcBiqnFun1bS2SBxumhWIXUbZ
+     procedure_id : 1228017135188781919
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the negative format for the numbers
+      // Syntax:
+      //[ <Result> = ] Number_NegativeFormat ([<nInfoFromWhom> is int [, <sFormat> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      //	sFormat (string - default value=""): New format
+      // Return value:
+      // 	Undefined type: Negative format for the numbers, True or False if it is modified
+      
+      Procedure Number_NegativeFormat(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sFormat is string = “”)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      //Create the associative array of negative formats of numbers 
+      arrNumberNegativeFormats is array of strings
+      _CreateArrNumberNegativeFormats(nInfoFromWhom, arrNumberNegativeFormats)
+      
+      
+      IF sFormat = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_INEGNUMBER, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sNegativeFormat is string
+      		sNegativeFormat = Left(bufRESULT, nBufferSize-1)
+      		RESULT arrNumberNegativeFormats[Val(sNegativeFormat) + 1 ]
+      	END
+      	
+      ELSE
+      	
+      	nSubscript is int = ArraySeek(arrNumberNegativeFormats,asLinear,sFormat)
+      	nSubscript--
+      	sFormat = nSubscript
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_INEGNUMBER, sFormat) = 0 THEN
+      		RESULT False
+      	ELSE
+      		RESULT True
+      	END
+      	
+      END	
+     type : 458752
+   -
+     name : Number_DisplayZeroInFront
+     internal_properties : CAAAAAgAAABP57CsF9wkZ7kaW27oX360TDmhq+igzClFTF3rr/sLvpfLh3w+SDErlnefwFIjZC0uGc1SGxo0em+YI6uEcgFZ5QMmwGTif1Y9RZlQ/sgKxa/qxEkE9u7hZm9xorcF7h7TkTjhfprCkoX3uuPvrxfouhxS+a8VIRjuHwtLTJjlTgZT6lVnb1qrJ6QyWW9b9vTLiET2CztyFVes2L1xUq8g9iJMZeZ8a+Pdw5r8HpZEDFz5BY6zD/NgybgYg2pjkvqHNkDQlb/HXYdFiIWNHeBdKH872Dao3qNI2ZNNyowlZOK52xZjNhzT/8MbbHn2VkYG2i3eO6R10a2ta7LgxSwbdvZGUMsIiBBmO/5plzoyxQcwFHdESZi7ePmpFR3BbnWF78WKK9TyYP3CbUXw3avWSnrlqGoK9z3tD6ZaapkR1FpylGPX+0w=
+     procedure_id : 1228017135188847455
+     type_code : 15
+     code : |1-
+      // Summary: Specifies whether the zeros are displayed in front of the numbers
+      // Syntax:
+      //[ <Result> = ] Number_DisplayZeroInFront ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	Undefined type: True if zero in front, False otherwise
+      
+      Procedure Number_DisplayZeroInFront(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_ILZERO , &bufRESULT, 200)
+      
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sDisplayZero is string
+      	sDisplayZero = Left(bufRESULT, nBufferSize-1)
+      	
+      	SWITCH sDisplayZero 
+      		CASE “0” : 
+      			RESULT False
+      		CASE “1” :
+      			RESULT True
+      		OTHER CASE : //Should not happen..
+      			dbgAssert(True, “Number_DisplayZeroInFront: This case returned by the API is not supported.”)
+      			
+      	END
+      END
+     type : 458752
+   -
+     name : Number_ListSeparator
+     internal_properties : CAAAAAgAAADapy0UreDd41TvOGrU8PTkY640J76QFAhMc6i7LL7dqU2RP+9nkAia0Sneb2sYj9nGgiRSu4fo23Kz0lDqYlGAQd2TghUncbaRiTnBM2atBnP0I62uV8wiqK2vrGW+Nq7dtSULAKVR+aqgy/cH4stha7pXXlAB5Jjmrn1aaMUJ7+C6jz7fuc2u8SS3WoUgmidLUVcTasRyx2MqwVNBH2KFhFfhXNB68wBFXGFhyO/RoKs/zk80RGedh60yfyNXrQ==
+     procedure_id : 1228017135188912991
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the list separator for the numbers
+      // Syntax:
+      //[ <Result> = ] Number_ListSeparator ([<nInfoFromWhom> is int [, <sSep> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      //	sSep (string - default value=""): New separator
+      // Return value:
+      // 	Undefined type: List separator, True or False if it is modified
+      
+      Procedure Number_ListSeparator(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sSép is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the current separator
+      IF sSép = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SLIST, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sListSeparator is string
+      		sListSeparator = Left(bufRESULT, nBufferSize-1)
+      		RESULT sListSeparator
+      	END
+      	
+      ELSE
+      	
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_SLIST, sSép) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Number_MeasurementSystem
+     internal_properties : CAAAAAgAAAD77J+RfYTE4Il/MjzOB65bmIeGxueO+og0SIFx9G/QokC/tTwrnYV8EzmUfHjsVXYaQNJMA4ueEUn1wlvzbTMBjD8CYy0GES+BRwYiV9J5E34hxeT1PmxQObIoqSSVXsgXmYHRWaQRDb7lut7HYRE/udRBipGMkvhe96wTPOoX0+cNGqVdYx5ZlBYnJFyki1BCHMoWVlA5ONDUgeHsj2dU9lN1pndfm2mWfgkEivSTEMMzMigc
+     procedure_id : 1228017135188978527
+     type_code : 15
+     code : |1+
+      // Summary: Returns the measurement system
+      // Syntax:
+      //[ <Result> = ] Number_MeasurementSystem ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      // Return value:
+      // 	string: Measurement system
+      
+      Procedure Number_MeasurementSystem(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_IMEASURE, &bufRESULT, 200)
+      
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	
+      	// Copy the buffer
+      	sMeasurementSystem is string
+      	sMeasurementSystem = Left(bufRESULT, nBufferSize-1)
+      	SWITCH sMeasurementSystem 
+      		CASE 0 : //European measurement system
+      			RESULT “Metrics”
+      		CASE 1 ://English measurement system 
+      			RESULT “inches”
+      		OTHER CASE : 
+      			dbgAssert(True, “Number_MeasurementSystem: This case returned by the API is not supported.”)
+      			RESULT “”
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Number_UseOfNativeDigits
+     internal_properties : CAAAAAgAAAD77J+RfYTE4Il/MjzOB65bmIeGxueO+og0SIFx9G/QokC/tTwrnYV8EzmUfHjsVXYaQNJMA4ueEUn1wlvzbTMBjD8CYy0GES+BRwYiV9J5E34hxeT1PmxQObIoqSSVXsgXmYHRWaQRDb7lut7HYRE/udRBipGMkvhe96wTPOoX0+cNGqVdYx5ZlBYnJFyki1BCHMoWVlA5ONDUgeHsj2dU9lN1pndfm2mWfgkEivSTEMMzMigc
+     procedure_id : 1228017135189044063
+     type_code : 15
+     code : |1+
+      // Summary: Returns the use of native digits
+      // Syntax:
+      //[ <Result> = ] Number_UseOfNativeDigits ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      // Return value:
+      // 	string: Use of native digits
+      
+      Procedure Number_UseOfNativeDigits(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_IDIGITSUBSTITUTION, &bufRESULT, 200)
+      
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	
+      	// Copy the buffer
+      	sUseOfNativeDigits is string
+      	sUseOfNativeDigits = Left(bufRESULT, nBufferSize-1)
+      	SWITCH sUseOfNativeDigits 
+      		CASE 0 :
+      			RESULT “Context”
+      		CASE 1 :
+      			RESULT “Never”
+      		CASE 2 :
+      			RESULT “National”
+      		OTHER CASE : 
+      			dbgAssert(True, “Number_UseOfNativeDigits: This case returned by the API is not supported.”)
+      			RESULT “”
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Format_EnglishCurrencyName
+     internal_properties : CAAAAAgAAAALPG9BzTQQkDnP2tz2v2aLSLcuNg+WmtCMgOEpZM+A+ug3GVxr/UXcUxl03His9dbaAHIsAyue8UkVInszrdPhjL/ig+0mEQ8BJ+YCV5KZ8z7hpYS1nixwORLYWbQFLjiHiZHBSZSB/e416o5XkSFvqcTRukE8wqgOhxzDzJqnA1f9KlWNE86JhGbX1GxUW0CyDF5KYqyNjCygBb24q7vYeldpSvP7T53Sqt2AFkDDwBODgljs
+     procedure_id : 1228017135189109599
+     type_code : 15
+     code : |1+
+      // Summary: Returns the name of the currency of the format currently selected: for example: English (England), in English
+      // Syntax:
+      //[ <Result> = ] Format_EnglishCurencyName ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	string: Name of the currency in English
+      
+      Procedure Format_EnglishCurrencyName(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SENGCURRNAME, &bufRESULT, 200)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sCurrencyName is string
+      	sCurrencyName = Left(bufRESULT, nBufferSize-1)
+      	RESULT sCurrencyName 
+      END
+     type : 458752
+   -
+     name : Date_ShortDateFormat
+     internal_properties : CAAAAAgAAAAgXUuiU0p7/ZKl5sh2HvpK2UvAofAQ+AZKCZI/bkqDPzG/08FZaMyUz+fQz9lAPdsiMAwwNW+ctcQ1JORk/s9u+bMrKN/PbWhb82fljSqnBEsy89NcgxRUxvsRUFcy9E/8SvL+RxTkoHXJxEQUDWA6wiecaYs0E7/Zj74TAexiRFc3DLFuNEQdaLksN/L7Q6x+EtC6IaNV7kJH3vQiSqtSc0Tub6cBXoPQRWqePS3DVhGVlFnugnmv7UNYEb2t1w==
+     procedure_id : 1228017135189175135
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the format of the short date
+      // Syntax:
+      //[ <Result> = ] Date_ShortDateFormat ([<nInfoFromWhom> is int [, <sFormat> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      //	sFormat (string - default value=""): New format
+      // Return value:
+      // 	Undefined type: Format of the short date if it is requested, True or False if it is modified
+      
+      Procedure Date_ShortDateFormat(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sFormat is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the current format
+      IF sFormat = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SSHORTDATE, &bufRESULT, 200)
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sShortDateFormat is string
+      		sShortDateFormat = Left(bufRESULT, nBufferSize-1)
+      		RESULT sShortDateFormat 
+      	END
+      	
+      ELSE
+      	//Modify the format
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_SSHORTDATE, sFormat) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      END
+      
+      
+     type : 458752
+   -
+     name : Date_LongDateFormat
+     internal_properties : CAAAAAgAAAAgXUuiU0p7/ZKl5sh2HvpK2UvAofAQ+AZKCZI/bkqDPzG/08FZaMyUz+fQz9lAPdsiMAwwNW+ctcQ1JORk/s9u+bMrKN/PbWhb82fljSqnBEsy89NcgxRUxvsRUFcy9E/8SvL+RxTkoHXJxEQUDWA6wiecaYs0E7/Zj74TAexiRFc3DLFuNEQdaLksN/L7Q6x+EtC6IaNV7kJH3vQiSqtSc0Tub6cBXoPQRWqePS3DVhGVlFnugnmv7UNYEb2t1w==
+     procedure_id : 1228017135189240671
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the format of the long date
+      // Syntax:
+      //[ <Result> = ] Date_LongDateFormat ([<nInfoFromWhom> is int [, <sFormat> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      //	sFormat (string - default value=""): New format
+      // Return value:
+      // 	Undefined type: Format of the long date if it is requested, True or False if it is modified
+      
+      Procedure Date_LongDateFormat(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sFormat is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the current format
+      IF sFormat = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SLONGDATE, &bufRESULT, 200)
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sLongDateFormat is string
+      		sLongDateFormat = Left(bufRESULT, nBufferSize-1)
+      		RESULT sLongDateFormat 
+      	END
+      	
+      ELSE
+      	//Modify the format
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_SLONGDATE, sFormat) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      END
+      
+     type : 458752
+   -
+     name : Time_Format
+     internal_properties : CAAAAAgAAADg4KQ7exqxD7maM9qLikIh/iEapmIuHOYpXlhNOMfrL0eN+7UgkSuaIkOsTowVgC70VwJUPdP2KbAvzjhI1jyo/l96GHwAsgpfS08crMNddwZI8wwp53LWgNG1JKabEDBHJ0vi0fdwrM764YMnqZH2f2j5rZGraX1AIo1U3hiR0nLsRZfGRzyXWfTbfnUvrjL535nuL2IhVq8uGQGr6tJ4Lrc1WV/Ohqy82UbtNp4rT2d7DVNnTEhsMrZIQLNWC/Bj
+     procedure_id : 1228017135189306207
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the format of the time
+      // Syntax:
+      //[ <Result> = ] Time_Format ([<nInfoFromWhom> is int [, <sFormat> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      //	sFormat (string - default value=""): New format
+      // Return value:
+      // 	Undefined type: Format of the time if it is requested, True or False if it is modified
+      
+      Procedure Time_Format(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sFormat is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the current format
+      IF sFormat = “” THEN
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_STIMEFORMAT, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sTimeFormat is string
+      		sTimeFormat = Left(bufRESULT, nBufferSize-1)
+      		RESULT sTimeFormat 
+      	END
+      	
+      ELSE
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_STIMEFORMAT, sFormat) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      END
+      
+     type : 458752
+   -
+     name : Time_AMSymbol
+     internal_properties : CAAAAAgAAADg4KQ7exqxD7maM9qLikIh/iEapmIuHOYpXlhNOMfrL0eN+7UgkSuaIkOsTowVgC70VwJUPdP2KbAvzjhI1jyo/l96GHwAsgpfS08crMNddwZI8wwp53LWgNG1JKabEDBHJ0vi0fdwrM764YMnqZH2f2j5rZGraX1AIo1U3hiR0nLsRZfGRzyXWfTbfnUvrjL535nuL2IhVq8uGQGr6tJ4Lrc1WV/Ohqy82UbtNp4rT2d7DVNnTEhsMrZIQLNWC/Bj
+     procedure_id : 1228017135189371743
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the symbol for AM
+      // Syntax:
+      //[ <Result> = ] Heure_AMSymbol ([<nInfoFromWhom> is int [, <sSymbol> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      //	sSymbol (string - default value=""): New symbol
+      // Return value:
+      // 	Undefined type: Symbol for AM if it is requested, True or False if it is modified
+      
+      Procedure Time_AMSymbol(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sSymbol is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the format
+      IF sSymbol = “” THEN
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_S1159, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sAMSymbol is string
+      		sAMSymbol = Left(bufRESULT, nBufferSize-1)
+      		RESULT sAMSymbol 
+      	END
+      	
+      ELSE
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_S1159, sSymbol) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      END
+      
+      
+     type : 458752
+   -
+     name : Time_PMSymbol
+     internal_properties : CAAAAAgAAADapy0UreDd41TvOGrU8PTkY640J76QFAhMc6i7LL7dqU2RP+9nkAia0Sneb2sYj9nGgiRSu4fo23Kz0lDqYlGAQd2TghUncbaRiTnBM2atBnP0I62uV8wiqK2vrGW+Nq7dtSULAKVR+aqgy/cH4stha7pXXlAB5Jjmrn1aaMUJ7+C6jz7fuc2u8SS3WoUgmidLUVcTasRyx2MqwVNBH2KFhFfhXNB68wBFXGFhyO/RoKs/zk80RGedh60yfyNXrQ==
+     procedure_id : 1228017135189437279
+     type_code : 15
+     code : |1+
+      // Summary: Returns or modifies the symbol for PM
+      // Syntax:
+      //[ <Result> = ] Heure_PMSymbol ([<nInfoFromWhom> is int [, <sSymbol> is string]])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: system or user
+      //	sSymbol (string - default value=""): New PM symbol
+      // Return value:
+      // 	Undefined type: Symbol for PM if it is requested, True or False if it is modified
+      
+      Procedure Time_PMSymbol(nInfoFromWhom is int = LOCAL_USER_DEFAULT, LOCAL sSymbol is string = “”)
+      
+      bufRESULT is buffer on 200
+      nBufferSize is int
+      
+      //Return the PM symbol
+      IF sSymbol = “” THEN
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_S2359, &bufRESULT, 200)
+      	
+      	IF nBufferSize = 0 THEN 
+      		//Fail
+      		RESULT “”
+      	ELSE
+      		// Copy the buffer
+      		sPMSymbol is string
+      		sPMSymbol = Left(bufRESULT, nBufferSize-1)
+      		RESULT sPMSymbol 
+      	END
+      	
+      ELSE
+      	
+      	//Modify it
+      	IF API(“kernel32”, “SetLocaleInfoA”, nInfoFromWhom, LOCALE_S2359, sSymbol) = 0 THEN
+      		RESULT False
+      	ELSE 
+      		RESULT True
+      	END
+      	
+      END
+     type : 458752
+   -
+     name : Format_CountryName
+     internal_properties : CAAAAAgAAAALPG9BzTQQkDnP2tz2v2aLSLcuNg+WmtCMgOEpZM+A+ug3GVxr/UXcUxl03His9dbaAHIsAyue8UkVInszrdPhjL/ig+0mEQ8BJ+YCV5KZ8z7hpYS1nixwORLYWbQFLjiHiZHBSZSB/e416o5XkSFvqcTRukE8wqgOhxzDzJqnA1f9KlWNE86JhGbX1GxUW0CyDF5KYqyNjCygBb24q7vYeldpSvP7T53Sqt2AFkDDwBODgljs
+     procedure_id : 1228017135189502815
+     type_code : 15
+     code : |1+
+      // Summary: Returns the name of the computer country, in the language of the computer
+      // Syntax:
+      //[ <Result> = ] Format_CountryName ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	string: Country of the computer, in the language of the computer
+      
+      Procedure Format_CountryName(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SCOUNTRY, &bufRESULT, 200)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sCountryName is string
+      	sCountryName = Left(bufRESULT, nBufferSize-1)
+      	RESULT sCountryName 
+      END
+      
+     type : 458752
+   -
+     name : Format_EnglishCountryName
+     internal_properties : CAAAAAgAAAALPG9BzTQQkDnP2tz2v2aLSLcuNg+WmtCMgOEpZM+A+ug3GVxr/UXcUxl03His9dbaAHIsAyue8UkVInszrdPhjL/ig+0mEQ8BJ+YCV5KZ8z7hpYS1nixwORLYWbQFLjiHiZHBSZSB/e416o5XkSFvqcTRukE8wqgOhxzDzJqnA1f9KlWNE86JhGbX1GxUW0CyDF5KYqyNjCygBb24q7vYeldpSvP7T53Sqt2AFkDDwBODgljs
+     procedure_id : 1228017135189568351
+     type_code : 15
+     code : |1+
+      // Summary: Returns the name of the computer country, in English
+      // Syntax:
+      //[ <Result> = ] Format_EnglishCountryName ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	string: Country of the computer, in English
+      
+      Procedure Format_EnglishCountryName(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SENGCOUNTRY , &bufRESULT, 200)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sCountryName is string
+      	sCountryName = Left(bufRESULT, nBufferSize-1)
+      	RESULT sCountryName 
+      END
+      
+     type : 458752
+   -
+     name : Format_CountryCode
+     internal_properties : CAAAAAgAAAALPG9BzTQQkDnP2tz2v2aLSLcuNg+WmtCMgOEpZM+A+ug3GVxr/UXcUxl03His9dbaAHIsAyue8UkVInszrdPhjL/ig+0mEQ8BJ+YCV5KZ8z7hpYS1nixwORLYWbQFLjiHiZHBSZSB/e416o5XkSFvqcTRukE8wqgOhxzDzJqnA1f9KlWNE86JhGbX1GxUW0CyDF5KYqyNjCygBb24q7vYeldpSvP7T53Sqt2AFkDDwBODgljs
+     procedure_id : 1228017135189633887
+     type_code : 15
+     code : |1+
+      // Summary: Returns the code of the computer country, which means the international dialing code
+      // Syntax:
+      //[ <Result> = ] Format_CountryCode ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	string: Code of the computer country
+      
+      Procedure Format_CountryCode(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_ICOUNTRY , &bufRESULT, 200)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sCountryCode is string
+      	sCountryCode = Left(bufRESULT, nBufferSize-1)
+      	RESULT sCountryCode 
+      END
+      
+      
+     type : 458752
+   -
+     name : Format_EnglishLanguageName
+     internal_properties : CAAAAAgAAAALPG9BzTQQkDnP2tz2v2aLSLcuNg+WmtCMgOEpZM+A+ug3GVxr/UXcUxl03His9dbaAHIsAyue8UkVInszrdPhjL/ig+0mEQ8BJ+YCV5KZ8z7hpYS1nixwORLYWbQFLjiHiZHBSZSB/e416o5XkSFvqcTRukE8wqgOhxzDzJqnA1f9KlWNE86JhGbX1GxUW0CyDF5KYqyNjCygBb24q7vYeldpSvP7T53Sqt2AFkDDwBODgljs
+     procedure_id : 1228017135189699423
+     type_code : 15
+     code : |1+
+      // Summary: Returns the name of the computer language, in English
+      // Syntax:
+      //[ <Result> = ] Format_EnglishLanguageName ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	string: Name of the computer language, in English
+      
+      Procedure Format_EnglishLanguageName(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SENGLANGUAGE , &bufRESULT, 200)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sLanguageName is string
+      	sLanguageName = Left(bufRESULT, nBufferSize-1)
+      	RESULT sLanguageName 
+      END
+      
+     type : 458752
+   -
+     name : Format_LanguageName
+     internal_properties : CAAAAAgAAAALPG9BzTQQkDnP2tz2v2aLSLcuNg+WmtCMgOEpZM+A+ug3GVxr/UXcUxl03His9dbaAHIsAyue8UkVInszrdPhjL/ig+0mEQ8BJ+YCV5KZ8z7hpYS1nixwORLYWbQFLjiHiZHBSZSB/e416o5XkSFvqcTRukE8wqgOhxzDzJqnA1f9KlWNE86JhGbX1GxUW0CyDF5KYqyNjCygBb24q7vYeldpSvP7T53Sqt2AFkDDwBODgljs
+     procedure_id : 1228017135189764959
+     type_code : 15
+     code : |1+
+      // Summary: Returns the name of the computer language, in the language of the computer
+      // Syntax:
+      //[ <Result> = ] Format_LanguageName ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	string: Language of the computer, in the language of the computer
+      
+      Procedure Format_LanguageName(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_SLANGUAGE, &bufRESULT, 200)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sCountryName is string
+      	sCountryName = Left(bufRESULT, nBufferSize-1)
+      	RESULT sCountryName 
+      END
+      
+     type : 458752
+   -
+     name : Format_FirstDayOfWeek
+     internal_properties : CAAAAAgAAABjy2W6kvnSq80zvf5e/4/1r/pbMHSlosfokBO+mPCwuAsUIMAzrKjrsqn9TmOHVbLkQrtdOJ9NVHuu6CO4g4wBV5DME4/RP0KoZ6gbr5LEap+WnY7KHzlADNYPWXn3ptOQFkkpomoxOaOKkleTVov5opw6S1Yy4qRnsO7C3HF/GQpWtJkhiKfQ4lTYGmlgTFF2oFcT6cOJhptvdQbwlMscrWH88TwfwcOg+BCJFJ8NfPGE8KHwDipONEWyQ/wbA07iOqxQ3W3qaw==
+     procedure_id : 1228017135189830495
+     type_code : 15
+     code : |1+
+      // Summary: Returns the 1st day of the week
+      // Syntax:
+      //[ <Result> = ] Format_FirstDayOfWeek ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	string: First day of the week
+      
+      Procedure Format_FirstDayOfWeek(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      bufRESULT is Buffer on 200
+      nBufferSize is int
+      
+      nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, LOCALE_IFIRSTDAYOFWEEK , &bufRESULT, 200)
+      
+      IF nBufferSize = 0 THEN 
+      	//Fail
+      	RESULT “”
+      ELSE
+      	// Copy the buffer
+      	sDay is string
+      	sDay = Left(bufRESULT, nBufferSize-1)
+      	//At this time, we have "0" (= Monday), "1" (= Tuesday)... 
+      	
+      	//We would like to have the day in letters in the language of the country, 
+      	//it will be retrieved by calling the GetLocaleInfoA API with the corresponding "LOCALE_SDAYNAMExxx" constant 
+      	//knowing that LOCALE_SDAYNAME1 is for Monday, LOCALE_SDAYNAME2 for Tuesday...
+      	
+      	nDay is int
+      	SWITCH sDay 
+      		CASE “0” : 
+      			nDay = LOCALE_SDAYNAME1
+      			
+      		CASE “1” : 			
+      			nDay = LOCALE_SDAYNAME2
+      			
+      		CASE “2” :
+      			nDay = LOCALE_SDAYNAME3 
+      			
+      		CASE “3” :
+      			nDay = LOCALE_SDAYNAME4 
+      			
+      		CASE “4” :
+      			nDay = LOCALE_SDAYNAME5 
+      			
+      		CASE “5” :
+      			nDay = LOCALE_SDAYNAME6
+      			
+      		CASE “6” :
+      			nDay = LOCALE_SDAYNAME7 
+      			
+      		OTHER CASE :
+      			dbgAssert(True,  “Format_FirstDayOfWeek: This case returned by the API is not supported.”)
+      	END
+      	
+      	nBufferSize = API(“kernel32”, “GetLocaleInfoA”, nInfoFromWhom, nDay, &bufRESULT, 200)
+      	// Copy the buffer
+      	sDay = Left(bufRESULT, nBufferSize-1)
+      	RESULT sDay
+      END
+      
+     type : 458752
+   -
+     name : _ListShortDateFormats
+     internal_properties : CAAAAAgAAACeL9IezGBNVACIuf8CViVeybDWr3Ay432igMlPx+CylCLGYiwMZi4hppfw9xSXna+Nuq7mpNoJQHQ1/BgMWph8S46nIS5odrJ9MoqPP1DlczYkGOe4fkU2kUgw6W4Ogs9zHgRb2w3J1mtYhsqJNgmkqwV0xP2naqXPdgBvaA8xKG0bUv/HZZCR6HeMVejfd61xAzio/L1cYPNEnmb5dV8Pf7oT5A==
+     procedure_id : 1228017135189896031
+     type_code : 15
+     code : |1-
+      // Summary: Callback used to retrieve the list of date formats available for the current language
+      // Syntax:
+      //[ <Result> = ] _ListShortDateFormats (<nPointerOnFormat> is int)
+      //
+      // Parameters:
+      //	nPointerOnFormat (integer): Pointer on a buffer
+      // Return value:
+      // 	boolean: Returns True to continue to list the formats
+      
+      Procedure PRIVATE _ListShortDateFormats(nPointerOnFormat is int)
+      
+      gbufListShortDateFormats += [CR] + StringRetrieve(nPointerOnFormat,srASCIIZAddress)
+      
+      RESULT True
+     type : 458752
+   -
+     name : Date_ListShortDateFormats
+     internal_properties : CAAAAAgAAAAwuIGZqG8Z92bBzGavgkvkEwbFe/FlhodgsF4OdTdcCfoCLpbX7hbibtzftGhHaauUTU9qB4mLjpO2QI7y3hCqw4d0qYIxX6OodwcDBXdJMahTFKG9kH2KFLGsGrUGuJUnjiVH7N9rlJaZtL/OIG8apfP3QsxVMNeeExIgX9ddkJNtrc/82drHo8Ay0nc7ejjU8YRh6BwqUDHYjkSPGhRc/ibWTsbT
+     procedure_id : 1228017135189961567
+     type_code : 15
+     code : |1+
+      // Summary: Lists the short date formats available for the current format (the current language)
+      // Syntax:
+      //[ <Result> = ] Date_ListShortDateFormats ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	Undefined type: List of short date formats, empty string if a problem occurred
+      
+      Procedure Date_ListShortDateFormats(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      gbufListShortDateFormats = “”
+      
+      IF API(“kernel32”, “EnumDateFormatsA”, &_ListShortDateFormats, nInfoFromWhom, DATE_SHORTDATE) <> 0 THEN
+      	RESULT gbufListShortDateFormats
+      ELSE
+      	RESULT “”
+      END
+     type : 458752
+   -
+     name : Date_ListLongDateFormats
+     internal_properties : CAAAAAgAAAAwuIGZqG8Z92bBzGavgkvkEwbFe/FlhodgsF4OdTdcCfoCLpbX7hbibtzftGhHaauUTU9qB4mLjpO2QI7y3hCqw4d0qYIxX6OodwcDBXdJMahTFKG9kH2KFLGsGrUGuJUnjiVH7N9rlJaZtL/OIG8apfP3QsxVMNeeExIgX9ddkJNtrc/82drHo8Ay0nc7ejjU8YRh6BwqUDHYjkSPGhRc/ibWTsbT
+     procedure_id : 1228017135190027103
+     type_code : 15
+     code : |1+
+      // Summary: Lists the long date formats available for the current format (the current language)
+      // Syntax:
+      //[ <Result> = ] Date_ListLongDateFormats ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	Undefined type: List of long date formats, empty string if a problem occurred
+      
+      Procedure Date_ListLongDateFormats(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      gbufListLongDateFormats = “”
+      
+      IF API(“kernel32”, “EnumDateFormatsA”, &_ListLongDateFormats, nInfoFromWhom, DATE_LONGDATE) <> 0 THEN
+      	RESULT gbufListLongDateFormats
+      ELSE
+      	RESULT “”
+      END
+     type : 458752
+   -
+     name : _ListLongDateFormats
+     internal_properties : CAAAAAgAAACeL9IezGBNVACIuf8CViVeybDWr3Ay432igMlPx+CylCLGYiwMZi4hppfw9xSXna+Nuq7mpNoJQHQ1/BgMWph8S46nIS5odrJ9MoqPP1DlczYkGOe4fkU2kUgw6W4Ogs9zHgRb2w3J1mtYhsqJNgmkqwV0xP2naqXPdgBvaA8xKG0bUv/HZZCR6HeMVejfd61xAzio/L1cYPNEnmb5dV8Pf7oT5A==
+     procedure_id : 1228017135190092639
+     type_code : 15
+     code : |1-
+      // Summary: Callback used to retrieve the list of date formats available for the current language
+      // Syntax:
+      //[ <Result> = ] _ListLongDateFormats (<nPointerOnFormat> is int)
+      //
+      // Parameters:
+      //	nPointerOnFormat (integer): Pointer on a buffer
+      // Return value:
+      // 	boolean: Returns True to continue to list the formats
+      
+      Procedure PRIVATE _ListLongDateFormats(nPointerOnFormat is int)
+      
+      gbufListLongDateFormats += [CR] + StringRetrieve(nPointerOnFormat,srASCIIZAddress)
+      
+      RESULT True
+     type : 458752
+   -
+     name : Time_ListTimeFormats
+     internal_properties : CAAAAAgAAAAwuIGZqG8Z92bBzGavgkvkEwbFe/FlhodgsF4OdTdcCfoCLpbX7hbibtzftGhHaauUTU9qB4mLjpO2QI7y3hCqw4d0qYIxX6OodwcDBXdJMahTFKG9kH2KFLGsGrUGuJUnjiVH7N9rlJaZtL/OIG8apfP3QsxVMNeeExIgX9ddkJNtrc/82drHo8Ay0nc7ejjU8YRh6BwqUDHYjkSPGhRc/ibWTsbT
+     procedure_id : 1228017135190158175
+     type_code : 15
+     code : |1+
+      // Summary: Lists the time formats available for the current format (the current language)
+      // Syntax:
+      //[ <Result> = ] Time_ListTimeFormats ([<nInfoFromWhom> is int])
+      //
+      // Parameters:
+      //	nInfoFromWhom (integer - default value=1024): From whom do we want to retrieve the information: the user or the system
+      // Return value:
+      // 	Undefined type: List of time formats, empty string if a problem occurred
+      
+      Procedure Time_ListTimeFormats(nInfoFromWhom is int = LOCAL_USER_DEFAULT)
+      
+      gbufListTimeFormats = “”
+      
+      IF API(“kernel32”, “EnumTimeFormatsA”, &_ListTimeFormats, nInfoFromWhom, 0) <> 0 THEN
+      	RESULT gbufListTimeFormats
+      ELSE
+      	RESULT “”
+      END
+     type : 458752
+   -
+     name : _ListTimeFormats
+     internal_properties : CAAAAAgAAACeL9IezGBNVACIuf8CViVeybDWr3Ay432igMlPx+CylCLGYiwMZi4hppfw9xSXna+Nuq7mpNoJQHQ1/BgMWph8S46nIS5odrJ9MoqPP1DlczYkGOe4fkU2kUgw6W4Ogs9zHgRb2w3J1mtYhsqJNgmkqwV0xP2naqXPdgBvaA8xKG0bUv/HZZCR6HeMVejfd61xAzio/L1cYPNEnmb5dV8Pf7oT5A==
+     procedure_id : 1228017135190223711
+     type_code : 15
+     code : |1-
+      // Summary: Callback used to retrieve the list of time formats available for the current language
+      // Syntax:
+      //[ <Result> = ] _ListTimeFormats (<nPointerOnFormat> is int)
+      //
+      // Parameters:
+      //	nPointerOnFormat (integer): Pointer on a buffer
+      // Return value:
+      // 	boolean: Returns True to continue to list the formats
+      
+      Procedure PRIVATE _ListTimeFormats(nPointerOnFormat is int)
+      
+      gbufListTimeFormats += [CR] + StringRetrieve(nPointerOnFormat,srASCIIZAddress)
+      
+      RESULT True
+     type : 458752
+   -
+     name : _CreateArrNumberNegativeFormats
+     internal_properties : CAAAAAgAAACm0UKUlpqsGXRki2lW6LNqxbI+MgbFISZOsDDJGW7iR3CtG0rZqOSZ/obyUNZ0oRq+jmZbfgRR494aUeYMGkz9tcZQZPDM+47EzM7N9SJpEgeU9IIGq1DvvdLNXdgFvdhEk6TYbU7yLWGcNyhJocz1etju+9UeGb6xLi35/jY259MNtUdkR5bz6cZI0FUxVBY0UOuCnTY=
+     procedure_id : 1228017135190289247
+     type_code : 15
+     code : |1+
+      // Summary: Stores in memory the list of format for the negative numbers 
+      // Syntax:
+      //_CreateArrNumberNegativeFormats (<nInfoFromWhom>, <arrNumberNegativeFormats>)
+      //
+      // Parameters:
+      //	nFromWhom: From whom do we want to retrieve the information: system or user
+      //	arrNumberNegativeFormats: Array that will be filled with the formats of negative numbers
+      // Return value:
+      // 	None
+      
+      Procedure _CreateArrNumberNegativeFormats(nInfoFromWhom, arrNumberNegativeFormats)
+      
+      ArrayDeleteAll(arrNumberNegativeFormats)
+      
+      sDecimalSymbol is string = Number_DecimalSeparator(nInfoFromWhom)
+      sNegativeSymbol is string = Number_NegativeSymbol(nInfoFromWhom)
+      
+      // Example: (1.1)
+      ArrayAdd(arrNumberNegativeFormats, OPENING_BRACKET + “1” + sDecimalSymbol + “1” + CLOSING_BRACKET  )
+      
+      //Example: -1.1
+      ArrayAdd(arrNumberNegativeFormats, sNegativeSymbol + “1” + sDecimalSymbol + “1” )	
+      
+      //Example: - 1.1
+      ArrayAdd(arrNumberNegativeFormats, sNegativeSymbol + SPC + “1” + sDecimalSymbol  + “1”)
+      
+      //Example: 1.1-
+      ArrayAdd(arrNumberNegativeFormats,  “1” + sDecimalSymbol + “1” + sNegativeSymbol )
+      
+      //Example: 1.1 -		
+      ArrayAdd(arrNumberNegativeFormats,  “1” + sDecimalSymbol  + “1”  + SPC + sNegativeSymbol )
+      
+      
+      
+     type : 458752
+   -
+     name : _CreateArrCurrencyNegativeFormats
+     internal_properties : CAAAAAgAAACm0UKUlpqsGXRki2lW6LNqxbI+MgbFISZOsDDJGW7iR3CtG0rZqOSZ/obyUNZ0oRq+jmZbfgRR494aUeYMGkz9tcZQZPDM+47EzM7N9SJpEgeU9IIGq1DvvdLNXdgFvdhEk6TYbU7yLWGcNyhJocz1etju+9UeGb6xLi35/jY259MNtUdkR5bz6cZI0FUxVBY0UOuCnTY=
+     procedure_id : 1228017135190354783
+     type_code : 15
+     code : |1+
+      // Summary: Stores in memory the list of negative formats available for the currencies
+      // Syntax:
+      //_CreateArrCurrencyNegativeFormats (<nInfoFromWhom>, <arrCurrencyNegativeFormats>)
+      //
+      // Parameters:
+      //	nFromWhom: From whom do we want to retrieve the information: system or user
+      //	arrCurrencyNegativeFormats: Array that will be filled with the negative formats for the currencies
+      // Return value:
+      // 	None
+      
+      Procedure _CreateArrCurrencyNegativeFormats(nInfoFromWhom, arrCurrencyNegativeFormats)
+      
+      ArrayDeleteAll(arrCurrencyNegativeFormats)
+      
+      sCurrencySymbol is string = Currency_CurrencySymbol(nInfoFromWhom)
+      sDecimalSymbol is string = Currency_DecimalSeparator(nInfoFromWhom)
+      
+      // Example: ($1.1)
+      ArrayAddLine(arrCurrencyNegativeFormats,  OPENING_BRACKET + sCurrencySymbol + “1” + sDecimalSymbol + “1” + CLOSING_BRACKET)
+      
+      //Example: -$1.1
+      ArrayAddLine(arrCurrencyNegativeFormats,  MINUS_SIGN + sCurrencySymbol + “1” + sDecimalSymbol + “1”)
+      
+      //Example: $-1.1
+      ArrayAddLine(arrCurrencyNegativeFormats, sCurrencySymbol + MINUS_SIGN + “1” + sDecimalSymbol + “1” )
+      
+      //Example: $1.1-
+      ArrayAddLine(arrCurrencyNegativeFormats, sCurrencySymbol + “1” + sDecimalSymbol + “1” + MINUS_SIGN )
+      
+      //Example: (1.1$)
+      ArrayAddLine(arrCurrencyNegativeFormats, OPENING_BRACKET + “1” + sDecimalSymbol + “1” + sCurrencySymbol + CLOSING_BRACKET )
+      
+      //Example: -1.1$
+      ArrayAddLine(arrCurrencyNegativeFormats, MINUS_SIGN + “1” + sDecimalSymbol  + “1” + sCurrencySymbol)
+      
+      //Example: 1.1-$
+      ArrayAddLine(arrCurrencyNegativeFormats,“1” + sDecimalSymbol  + “1” + MINUS_SIGN + sCurrencySymbol	)
+      
+      //Example: 1.1$-
+      ArrayAddLine(arrCurrencyNegativeFormats, “1” + sDecimalSymbol  + “1” + sCurrencySymbol + MINUS_SIGN )
+      
+      //Example: -1.1 $
+      ArrayAddLine(arrCurrencyNegativeFormats, MINUS_SIGN + “1” + sDecimalSymbol  + “1” + SPC + sCurrencySymbol)
+      
+      //Example: -$ 1.1
+      ArrayAddLine(arrCurrencyNegativeFormats,  MINUS_SIGN + sCurrencySymbol + SPC + “1” + sDecimalSymbol  + “1”)
+      
+      //Example: 1.1 $-
+      ArrayAddLine(arrCurrencyNegativeFormats,  “1” + sDecimalSymbol  + “1”  + SPC + sCurrencySymbol + MINUS_SIGN )
+      
+      //Example: $ 1.1-
+      ArrayAddLine(arrCurrencyNegativeFormats, sCurrencySymbol + SPC + “1” + sDecimalSymbol  + “1” + MINUS_SIGN )
+      
+      //Example: $ -1.1
+      ArrayAddLine(arrCurrencyNegativeFormats, sCurrencySymbol + SPC + MINUS_SIGN + “1” + sDecimalSymbol  + “1” )
+      
+      //Example: 1.1- $
+      ArrayAddLine(arrCurrencyNegativeFormats, “1” + sDecimalSymbol  + “1” + MINUS_SIGN + SPC + sCurrencySymbol)
+      
+      //Example: ($ 1.1)
+      ArrayAddLine(arrCurrencyNegativeFormats, OPENING_BRACKET + sCurrencySymbol + SPC + “1” + sDecimalSymbol  + “1” + CLOSING_BRACKET )
+      
+      //Example: (1.1 $)
+      ArrayAddLine(arrCurrencyNegativeFormats, OPENING_BRACKET + “1” + sDecimalSymbol + “1” + SPC + sCurrencySymbol + CLOSING_BRACKET )
+     type : 458752
+   -
+     name : _CreateArrCurrencyPositiveFormats
+     internal_properties : CAAAAAgAAACm0UKUlpqsGXRki2lW6LNqxbI+MgbFISZOsDDJGW7iR3CtG0rZqOSZ/obyUNZ0oRq+jmZbfgRR494aUeYMGkz9tcZQZPDM+47EzM7N9SJpEgeU9IIGq1DvvdLNXdgFvdhEk6TYbU7yLWGcNyhJocz1etju+9UeGb6xLi35/jY259MNtUdkR5bz6cZI0FUxVBY0UOuCnTY=
+     procedure_id : 1228017135190420319
+     type_code : 15
+     code : |1+
+      // Summary: Stores in memory the list of positive formats available for the currencies
+      // Syntax:
+      //_CreateArrCurrencyPositiveFormats (<nInfoFromWhom>, <arrCurrencyPositiveFormats>)
+      //
+      // Parameters:
+      //	nFromWhom: From whom do we want to retrieve the information: system or user
+      //	arrCurrencyPositiveFormats: Array that will be filled with the positive formats for the currencies
+      // Return value:
+      // 	None
+      
+      Procedure _CreateArrCurrencyPositiveFormats(nInfoFromWhom, arrCurrencyPositiveFormats)
+      
+      ArrayDeleteAll(arrCurrencyPositiveFormats)
+      
+      sCurrencySymbol is string = Currency_CurrencySymbol(nInfoFromWhom)
+      sDecimalSymbol is string = Currency_DecimalSeparator(nInfoFromWhom)
+      
+      // Currency symbol in prefix and no separation between the symbol and the currency
+      //Example: $1.1
+      ArrayAddLine(arrCurrencyPositiveFormats, sCurrencySymbol + “1” + sDecimalSymbol + “1”  	)
+      
+      // Currency symbol in suffix and no separation between the symbol and the currency
+      //Example: 1.1$
+      ArrayAddLine(arrCurrencyPositiveFormats, “1” + sDecimalSymbol + “1” + sCurrencySymbol )	
+      
+      // Currency symbol in prefix and separation between the symbol and the currency
+      //Example: $ 1.1
+      ArrayAddLine(arrCurrencyPositiveFormats, sCurrencySymbol + SPC + “1” + sDecimalSymbol +“1” )
+      
+      // Currency symbol in suffix and separation between the symbol and the currency
+      //Example: 1.1 $
+      ArrayAddLine(arrCurrencyPositiveFormats, “1” + sDecimalSymbol + “1” + SPC + sCurrencySymbol )
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : COL_Collection1
+resources :
+ string_res :
+  identifier : 0x1006a16f3359c74a
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
